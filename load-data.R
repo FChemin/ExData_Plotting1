@@ -14,11 +14,11 @@ dataset$Time <- NULL ## delete Time variable
 ## create a function to subset datable based on dates
 
 myfunc <- function(x,y){
-  dataset[dataset$Date >= x & dataset$Date <= y,]
+  dataset[dataset$DateTime >= x & dataset$DateTime < y,]
 } 
 
-DATE1 <- as.Date("2007-02-01")
-DATE2 <- as.Date("2007-02-02")
+DATE1 <- "2007-02-01"
+DATE2 <- "2007-02-03"
 
 ## create a subset of dataset
 
